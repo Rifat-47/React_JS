@@ -1,0 +1,4 @@
+Simple project using react components & useSate hook.
+components: modal, backdrop.
+
+handling events... 
