@@ -1,4 +1,5 @@
 starts from: 04 React state & working with events -> 012 Handling form submission
 
-concepts: lifting state up, handling form submission.
-
+concepts: lifting state up, handling form submission. 
+controlled & uncontrolled components: when components gets value from state or props from parent component, its controlled components.
+and when components gets value from DOM events, its uncontrolled components.
