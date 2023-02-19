@@ -1,0 +1,5 @@
+module 06: Styling React Components
+
+***we have learned***
+inline css
+styled-components
