@@ -1,0 +1,7 @@
+module 10_1 starts here...
+
+useEffects, reducers, context,,,
+
+module-10__1 is about useEffect.
+useEffect only rerenders when its dependency changes. 
+an important hook,, 
