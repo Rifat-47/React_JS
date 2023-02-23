@@ -24,7 +24,7 @@ function App() {
 	// 	},
 	// ];
 
-	// some change in syntax
+	// some change in syntax (using promise)
 	// function fetchMoviesHandler() {
 	// 	fetch('https://swapi.dev/api/films')
 	// 		.then(response => { console.log(response); return response.json() })
@@ -42,7 +42,8 @@ function App() {
 	// 			console.log(transformedMovies)
 	// 		});
 	// }
-
+	
+	// using asynchronous function
 	const fetchMoviesHandler = useCallback(async ()  => {
 		setIsLoading(true);
 		setError(null);
