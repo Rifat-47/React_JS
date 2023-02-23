@@ -1,0 +1,13 @@
+module 10_2 starts here...
+
+useReducers,,,
+
+when updating state based on another state => useReducer
+
+syntax for useReducer hook =>
+const [state, dispatchFunc] = useReducer(reducerFunc, initialState, initialFunc);
+state: state snapshot
+dispatchFunc : dispatch an action, this action goes to reducerFunc as parameter. 
+reducerFunc : receives two arg. (prevState, action) => new state snapshot
+initialState : initial state 
+initialFunc : function to set initial state

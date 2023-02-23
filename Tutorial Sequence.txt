@@ -12,6 +12,7 @@ project-11
 module-09
 module-09_1
 module-10_1
+module-10_2
 module-11
 module-12
 module-12_1
