@@ -7,6 +7,8 @@ function App() {
 	const [movies, setMovies] = useState([])
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(null);
+
+	// some dummy data for movies. 
 	// const dummyMovies = [
 	// 	{
 	// 		id: 1,
@@ -25,7 +27,7 @@ function App() {
 	// some change in syntax
 	// function fetchMoviesHandler() {
 	// 	fetch('https://swapi.dev/api/films')
-	// 		.then(response => { return response.json() })
+	// 		.then(response => { console.log(response); return response.json() })
 	// 		.then(data => {
 	// 			const transformedMovies = data.results.map(movieData => {
 	// 				return {
@@ -54,6 +56,7 @@ function App() {
 				return {
 					id: movieData.episode_id,
 					title: movieData.title,
+					director: movieData.director,
 					openingText: movieData.opening_crawl,
 					releaseDate: movieData.release_date,
 				};
@@ -61,9 +64,9 @@ function App() {
 			setMovies(transformedMovies);
 		} catch (error) {
 			setError(error.message);
+			console.log(error);
 		}
 		setIsLoading(false);
-		console.log(error.message)
 	}, []);
 
 	useEffect(() => {

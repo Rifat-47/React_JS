@@ -1,0 +1,4 @@
+module-14:Sending HTTP requests
+module-14 starts here,, tutorial: 1-8
+Project Name: Fetching Movie Data from api
+Project details: Fetching movies data from a api, handling the errors, useEffect & useCallback used here. 
