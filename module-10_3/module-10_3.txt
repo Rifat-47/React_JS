@@ -1,0 +1,21 @@
+module 10_3 starts here...
+tutorial: 13-14
+context,,,
+
+pass data from a parent component to its descendant components, 
+without the need to pass the data through props or intermediate components. => createContext
+
+createContext =>
+for using context thorough components, we have to do two things.
+we have to provide it & we have to listen to it. 
+
+
+<AuthContext.Provider value={CONTEXT}> = this provides the context through the childs & 'value' is a keyword here.
+
+again, there are also two ways to listen the context.
+<AuthContext.Consumer> {(context) => {}}  --->>> Consumer takes a child which returns a function & that function holds the context.
+In this module module-10_3, we have used <AuthContext.Consumer>
+
+&
+
+useContext hook
