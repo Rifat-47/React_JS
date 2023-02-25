@@ -1,0 +1,25 @@
+module 10_4 starts here...
+tutorial: 15- 18
+context,,,
+context can contain any value, it can be a object also,
+context using context hook,,,
+but context is using separately, not in App.js
+a component named 'AuthContextProvider' is formed, & wrapper up by <App /> component in index.js  
+---------
+pass data from a parent component to its descendant components, 
+without the need to pass the data through props or intermediate components. => createContext
+
+createContext =>
+for using context thorough components, we have to do two things.
+we have to provide it & we have to listen to it. 
+
+
+<AuthContext.Provider value={CONTEXT}> = this provides the context through the childs & 'value' is a keyword here.
+
+again, there are also two ways to listen the context.
+<AuthContext.Consumer> {(context) => {}}  --->>> Consumer takes a child which returns a function & that function holds the context.
+
+&
+
+useContext hook -->> const ctx = useContext(CONTEXT) **we can access our context in this way** 
+In this module module-10_4, we are using useContext hook.
