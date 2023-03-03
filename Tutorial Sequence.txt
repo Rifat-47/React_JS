@@ -1,4 +1,4 @@
-** Project Sequence **
+** Project Sequence of React Js**
 
 project-01
 project-03
