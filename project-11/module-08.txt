@@ -1,5 +1,12 @@
-08 time to practice, a complete practice project
+modulde: 08 time to practice, a complete practice project
 
 starts here... 
+
+Project Name: Practice Project
+[module 08: Time to practice, a complete practice project]
+Description: simple project, take inputs & shows info, 
+open a modal & backdrop for wrong input & shows error message.
+
+
 
 

@@ -1,3 +1,0 @@
-07 Debugging React Apps
-
-start here...

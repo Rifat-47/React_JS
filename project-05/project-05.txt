@@ -1,0 +1,4 @@
+react basic props concept...
+
+Simple project using react components & useSate hook.
+Main components: Expences, ExpencesForm

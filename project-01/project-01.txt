@@ -1,0 +1,4 @@
+Simple react project with some components that shows the expense item from some dummy data.
+Applying CSS in custom component.
+
+To apply css in custom component defined by us and want to render css from outside the component, we need to accept those css through props. It’s shown here.  
