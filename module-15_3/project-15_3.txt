@@ -1,0 +1,5 @@
+module-15:Building custom react hooks
+module-15_3 starts here,, tutorial: 6-10
+Project Name: Custom hooks for both get & post data in api
+Project details: In this project, custom hook (useHttp.js) is used by App and NewTask components via function.
+Firebase database: https://module-15-3-default-rtdb.firebaseio.com/tasks.json

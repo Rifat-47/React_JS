@@ -1,0 +1,19 @@
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: green;
+    border-radius: 1rem;
+    border-color: green;
+    color: whitesmoke;
+}
