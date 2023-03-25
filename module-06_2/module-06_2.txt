@@ -1,0 +1,9 @@
+module 06: Styling React Components
+
+Project Name: Course Goal
+
+***we have learned***
+css modules
+
+css module gives a unique value to the classes which are defined by user, 
+component name => our class name => unique class name
