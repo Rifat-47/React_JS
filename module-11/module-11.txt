@@ -6,5 +6,6 @@ Description: food order app shows available meals to the customers. Customers ca
 useReducer is used here to update the cart &
 useRef is used to take input from customers.
 useContext is used to share the cart among different areas of our project.
+useEffect is used in the header button of navigation bar for a little bump when new item is added or removed.
 
 
