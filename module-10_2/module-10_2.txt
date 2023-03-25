@@ -1,6 +1,6 @@
 module 10_2 starts here...
 
-useReducers,,,
+useReducer hook,,,
 
 when updating state based on another state => useReducer
 
