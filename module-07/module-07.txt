@@ -1,0 +1,9 @@
+module: 07 Debugging React Apps
+Project Name: Course Goal
+
+In this project, we have learned how to debug in react.
+There are few ways to debug:
+a) We can inspect & see the errors given my console.
+b) we can use breakpoints from sources in chrome dev-tools. 
+c) we can use an extension name “React Developer Tools”
+
