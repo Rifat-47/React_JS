@@ -3,5 +3,6 @@ module 10_1 starts here...
 useEffects, reducers, context,,,
 
 module-10_1 is about useEffect.
-useEffect only rerenders when its dependency changes. 
-an important hook,, 
+useEffect only rerenders when its dependency changes.
+useEffect returns a function that runs only before the re-execution of useEffect hook.
+it's an important hook,, 
