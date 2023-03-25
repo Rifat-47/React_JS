@@ -1,0 +1,14 @@
+[module 09: diving deeper, working with fragment, portals & _refs]
+
+Project Name: Practice Project 
+Description: simple project, take inputs & shows info, open a modal & backdrop for wrong input & shows error message. 
+### Fragment
+<React.Fragment>    </React.Fragment>
+<> </>
+& Portals
+** using state for form input is a controlled approach**
+** using ref hooks for form input is an uncontrolled approach**
+
+In module-09_2, ref is used, so, its uncontrolled approach.
+open a modal & backdrop for wrong input & shows error message. 
+here, portals are used for Backdrop & Modal. Inspecting the page, we can see div for different portals. 
