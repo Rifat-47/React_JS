@@ -1,3 +1,5 @@
+Module-03: React basic & working with components.
+
 Simple react project with some components that shows the expense item from some dummy data.
 Applying CSS in custom component.
 
