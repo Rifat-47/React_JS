@@ -8,10 +8,18 @@ function App() {
 	const [listTitle, setListTitle] = useState('My List');
 
 	const changeTitleHandler = useCallback(() => {
-		setListTitle('New Title');
-	}, []);
+		if (listTitle === 'My List') {
+			setListTitle('New Title');
+			// console.log(listTitle);
+		}
+		else {
+			setListTitle('My List');
+			// console.log(listTitle);
+		};
+	}, [listTitle]);
 
-	const listItems = useMemo(() => [5, 3, 1, 10, 9], []);
+	let arrayList = [5, 3, 1, 10, 9];
+	const listItems = useMemo(() => arrayList, [arrayList]);
 
 	return (
 		<div className="app">
