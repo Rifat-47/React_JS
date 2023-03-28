@@ -1,7 +1,7 @@
 
 
 const MyParagraph = (props) => {
-    console.log("MyParagraph running...")
+    console.log("DemoOuput => MyParagraph")
     return <p>{props.children}</p>
 };
 

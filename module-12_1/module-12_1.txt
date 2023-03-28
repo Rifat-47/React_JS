@@ -1,1 +1,19 @@
-this project is abount useMemo hook, & opmization of components...
+[module-12: look behind the scenes of react & optimization techniques]
+
+an component is re-rendered only when props/state/context is changed.
+
+re-evaluating component !== re-rendering the DOM
+
+array, objects, function are non-primptive value in javascript.
+string, number, boolean are primptive value in javascript.
+
+closure??
+
+React.memo(componentName) is used in Button.js
+React.memo denies the re-evaluation of a component if there's no change in the component via props. 
+
+useCallback hook saves a function in a component, it also takes a dependancy.
+
+React.memo & useCallback hook increases the optimization of our code. 
+
+
