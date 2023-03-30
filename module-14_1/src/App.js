@@ -8,22 +8,6 @@ function App() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(null);
 
-	// some dummy data for movies. 
-	// const dummyMovies = [
-	// 	{
-	// 		id: 1,
-	// 		title: 'Pathaan',
-	// 		openingText: 'This is the opening text of the movie',
-	// 		releaseDate: '2023-01-25',
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		title: 'Happy New Year',
-	// 		openingText: 'This is the second opening text of the movie',
-	// 		releaseDate: '2016-01-01',
-	// 	},
-	// ];
-
 	// some change in syntax (using promise)
 	// function fetchMoviesHandler() {
 	// 	fetch('https://swapi.dev/api/films')
@@ -49,10 +33,12 @@ function App() {
 		setError(null);
 		try {
 			const response = await fetch('https://swapi.dev/api/films/');
+			console.log(response);
 			if (!response.ok) {
 				throw new Error('Something went wrong!');
 			}
 			const data = await response.json();
+			console.log(data);
 			const transformedMovies = data.results.map((movieData) => {
 				return {
 					id: movieData.episode_id,
