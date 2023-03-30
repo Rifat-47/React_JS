@@ -16,7 +16,7 @@ module-10_2 - documentation completed
 module-11 - documentation completed
 module-12_1 - documentation completed
 module-12_2 - documentation completed
-module-14
-module-14_2
+module-14_1 - documentation completed
+module-14_2 - documentation completed
 module-15_1
 module-15_2
