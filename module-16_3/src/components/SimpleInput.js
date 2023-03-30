@@ -7,7 +7,8 @@ const SimpleInput = (props) => {
 		isValid: enteredNameIsValid,
 		hasError: nameInputHasError,
 		valueChangeHandler: nameInputChangeHandler,
-		inputBlurHandler: nameInputBlurHandler, reset
+		inputBlurHandler: nameInputBlurHandler, 
+		reset: resetNameInput
 	} = useInput(value => value.trim() !== '');
 
 	let formIsValid = false;
@@ -25,7 +26,7 @@ const SimpleInput = (props) => {
 
 		console.log(enteredName);
 
-		// nameInputRef.current.value = ""; => not IdleDeadline, dont manipulate the dom 
+		resetNameInput();
 	};
 
 	const nameInputClasses = nameInputHasError
