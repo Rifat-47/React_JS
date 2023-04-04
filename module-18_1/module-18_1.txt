@@ -12,3 +12,5 @@ we use useState/useReducer but need to build props chains.
 ex: user-authentication
 
 context/redux helps to manage the cross component or app-wide state. 
+
+components dont directly manipulate the data in the store.
