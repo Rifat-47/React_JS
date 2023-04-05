@@ -39,7 +39,3 @@ const store = createStore(counterReducer);
 export default store;
 
 
-// store.dispatch({ type: 'increment' });
-// store.dispatch({ type: 'decrement' });
-
-
