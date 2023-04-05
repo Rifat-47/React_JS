@@ -1,36 +1,41 @@
 import { createStore } from 'redux';
 
 // Define action types
-const ADD_DATA = 'ADD_DATA';
-const UPDATE_DATA = 'UPDATE_DATA';
-const DELETE_DATA = 'DELETE_DATA';
-const LOAD_DATA = 'LOAD_DATA';
-const MODAL_OPEN = 'modalOpen';
-const MODAL_CLOSE = 'modalClose';
-const initialState = {data: localStorage.getItem('myData'), modal: false, backdrop: false};
+export const LOAD_DATA = 'LOAD_DATA';
+export const ADD_DATA = 'ADD_DATA';
+export const UPDATE_DATA = 'UPDATE_DATA';
+export const DELETE_DATA = 'DELETE_DATA';
+
+const initialState = { data: [], modal: false, backdrop: false };
 
 // Define reducer
 const dataReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case LOAD_DATA:
+			localStorage.setItem('myData', JSON.stringify(action.data));
+			return {...state, data: action.data };
 		case ADD_DATA:
-			return [...state, action.data];
+			localStorage.setItem('myData', JSON.stringify([...state.data, action.data]));
+			return { ...state, data: [...state.data, action.data] };
 		case UPDATE_DATA:
-			return state.map((data) =>
+			const updatedData = state.data.map((data) =>
 				data.id === action.id ? { ...data, ...action.data } : data
 			);
+			localStorage.setItem('myData', JSON.stringify(updatedData));
+			// return { ...state, data: updatedData };
+			return {data: updatedData, modal: true, backdrop: true};
 		case DELETE_DATA:
-			return state.data.filter((data) => data.id !== action.id);
+			console.log(action)
+			const filteredData = state.data.filter((data) => data.id !== action.id);
+			localStorage.setItem('myData', JSON.stringify(filteredData));
+			return {data: filteredData, modal: false, backdrop: false};
 		case LOAD_DATA:
-			const storedData = localStorage.getItem('myData');
-			return storedData ? JSON.parse(storedData) : state;
-		case MODAL_OPEN:
-			return {data: localStorage.getItem('myData'), modal: true, backdrop: true}
-		case MODAL_CLOSE:
-			return {data: localStorage.getItem('myData'), modal: false, backdrop: false}
+			return {data : [...state.data, action.data], modal: false, backdrop: false}
 		default:
 			return state;
 	}
 };
+
 
 
 // Create store

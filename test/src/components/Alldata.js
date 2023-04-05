@@ -4,7 +4,7 @@ import Data from './Data';
 import { useSelector, useDispatch } from 'react-redux';
 import Modal from "./Modal";
 import Backdrop from "./Backdrop";
-
+import { ADD_DATA, UPDATE_DATA, DELETE_DATA, LOAD_DATA } from '../store/scc';
 const Alldata = (props) => {
     const dispatch = useDispatch();
     const modal = useSelector(state => state.modal);
@@ -12,13 +12,19 @@ const Alldata = (props) => {
     const allData = useSelector(state => state.data);
 
     const { url } = props;
-    const [data, setData] = useState([]);
 
-    const updateHandler = () => { 
-        dispatch({ type: 'modalOpen' });
+    const updateHandler = () => {
+        const data = {}
+        dispatch({ type: UPDATE_DATA})
     };
-    const deleteHandler = (id) => { 
-        dispatch({ type: 'DELETE_DATA', id: id  })
+
+    const deleteHandler = (id) => {
+        console.log(id);
+        dispatch({ type: 'DELETE_DATA', id: id })
+    };
+
+    const loadHandler = (data) => {
+        dispatch({type: LOAD_DATA, data: data})
     };
 
     useEffect(() => {
@@ -27,29 +33,27 @@ const Alldata = (props) => {
             const data = await response.json();
             const dataString = JSON.stringify(data);
             localStorage.setItem('myData', dataString);
+            dispatch({ type: LOAD_DATA, data: data})
         }
         fetchData(url);
 
-        const savedDataString = localStorage.getItem('myData');
-        const savedData = JSON.parse(savedDataString);
-        setData(savedData || []);
     }, [url]);
 
     return (
         <div className={classes.data}>
-            {data.map(item => (
+            {allData.map(item => (
                 <>
-                {modal && <Modal />}
-                {backdrop && <Backdrop />}
-                <Data
-                key={item.id}
-                item={item} 
-                >
-                    <button onClick={updateHandler}>Update</button>
-                    <button onClick={deleteHandler(item.id)}>Delete</button>
-                </Data>
-            </>
-                
+                    {modal && <Modal />}
+                    {backdrop && <Backdrop />}
+                    <Data
+                        key={item.id}
+                        item={item}
+                    >
+                        <button onClick={() => updateHandler(item)}>Update</button>
+                        <button onClick={() => deleteHandler(item.id)}>Delete</button>
+                    </Data>
+                </>
+
             ))}
         </div>
     );
