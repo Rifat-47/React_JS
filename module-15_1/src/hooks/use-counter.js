@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useCounter = (forwards=true) => {
+const useCounter = (forwards=false) => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
