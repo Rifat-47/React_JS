@@ -1,0 +1,5 @@
+module-16: working with forms & user input
+
+In input element, 
+ref deals with the current value of a input field
+onchange deals with every keystroke in a input field 
