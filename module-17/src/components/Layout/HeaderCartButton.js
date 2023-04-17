@@ -11,8 +11,10 @@ const HeaderCartButton = props => {
         return curNumber + item.amount;
     }, 0);
 
+    // adding CSS class depending on highLightedButton
     const btnClasses = `${classes.button} ${btnIsHighlighted ? classes.bump : ''}`;
 
+    // 
     useEffect(() => {
         if (items.length === 0) {
             return;
