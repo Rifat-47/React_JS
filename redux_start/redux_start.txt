@@ -1,4 +1,12 @@
-npm init -y
+module: 18 Diving into redux
+tutorial: 1-6
 
-npm install redux
+install redux:
+    npm init -y
+    npm install redux
+
+description: basic concept of redux
+
+
+
 

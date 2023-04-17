@@ -2,7 +2,7 @@ local => belongs to single component,,
 we use useState/useReducer hook
 ex: listeing input, toggling 'show more' etc.
 
-cross-component => affecst multiple components,, 
+cross-component => affect multiple components,, 
 we use useState/useReducer but need to build props chains.
 ex: open/close modal
 
