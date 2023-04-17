@@ -1,3 +1,4 @@
+// importing redux (default node js import syntax)
 const redux = require('redux');
 
 const counterReducer = (state={counter:0} , action) => { // receives 2 arguments, current state & action to be done
@@ -16,7 +17,7 @@ const counterReducer = (state={counter:0} , action) => { // receives 2 arguments
 
 const store = redux.createStore(counterReducer); // store receives reducer function that changes the data
 
-console.log(store.getState()); // gives snapshot of the current state
+// console.log(store.getState()); // gives snapshot of the current state
 
 const counterSubscriber = () => {
     const latestState = store.getState();
