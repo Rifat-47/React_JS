@@ -1,11 +1,12 @@
 // useSelector or useStore can be used to get access the redux 
-// connect cam be used to get access the redux for classbased components
+// connect can be used to get access the redux for classbased components
 import { useSelector, useDispatch } from 'react-redux';
 import classes from './Counter.module.css';
 
 const Counter = () => {
 	const dispatch = useDispatch(); // useDispatch returns a function
-	const counter = useSelector(state => state.counter);
+	
+	const counter = useSelector(state => state.counter); // useSelector gives as current snapshot
 	const show = useSelector(state => state.showCounter);
 
 	const incrementHandler = () => {
