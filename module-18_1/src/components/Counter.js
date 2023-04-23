@@ -18,7 +18,7 @@ const Counter = () => {
 	};
 
 	const increaseHandler = () => {
-		dispatch({ type: 'increase', amount: 5 })
+		dispatch({ type: 'incrementByAmount', amount: 5 })
 	};
 
 	const toggleCounterHandler = () => {
