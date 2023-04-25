@@ -1,0 +1,24 @@
+Module-18 Diving into redux
+tutorial: 7-
+tutorial 12 shows redux with classbased components
+----------------------------------------
+local => belongs to single component,, 
+we use useState/useReducer hook
+ex: listeing input, toggling 'show more' etc.
+
+cross-component => affect multiple components,, 
+we use useState/useReducer but need to build props chains.
+ex: open/close modal
+
+app-wide state => affects entire app 
+we use useState/useReducer but need to build props chains.
+ex: user-authentication
+
+context/redux helps to manage the cross component or app-wide state. 
+
+install:
+    npm install redux react-redux
+
+
+NB: in redux, don't mutate the object, create a brand new object. 
+
