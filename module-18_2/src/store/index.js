@@ -1,45 +1,52 @@
-import { createSlice, createReducer} from '@reduxjs/toolkit';
-import redux from 'redux';
-import { createStore } from 'redux';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
-export const Increment = 'increment';
-export const IncrementByAmount = 'incrementByAmount';
-export const Decrement = 'decrement';
+const initialCounterState = { counter: 0, showCounter: true };
 
-const initialState = { counter: 0, showCounter: true };
+// A slice is a portion of the Redux store that manages a specific part of the state.
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState: initialCounterState,
+    reducers: {
+        increment(state) {
+            state.counter++;
+        },
+        decrement(state) {
+            state.counter--;
+        },
+        increaseByAmount(state, action) {
+            state.counter = state.counter + action.payload;
+        },
+        toogleCounter(state) {
+            state.showCounter = !state.showCounter;
+        },
+    }
+});
 
-const counterReducer = (state = initialState, action) => {
-    if (action.type === IncrementByAmount) {
-        return {
-            counter: state.counter + action.amount,
-            showCounter: state.showCounter
-        }
-    };
+const initialAuthState = { isAuthenticated: false };
 
-    if (action.type === Increment) {
-        return {
-            counter: state.counter + 1,
-            showCounter: state.showCounter
-        }
-    };
+const authSlice = createSlice({
+    name: 'auth',
+    initialState: initialAuthState,
+    reducers: {
+        login(state) {
+            state.isAuthenticated = true;
+        },
+        logout(state) {
+            state.isAuthenticated = false;
+        },
+    }
+});
 
-    if (action.type === Decrement) {
-        return {
-            counter: state.counter - 1,
-            showCounter: state.showCounter
-        }
-    };
-    if (action.type === 'toggle') {
-        return {
-            counter: state.counter,
-            showCounter: !state.showCounter
-        }
-    };
-    return state
-};
+const store = configureStore({ // configureStore creates a redux store
+    // for one reducer, it can use below way 
+    // reducer: counterSlice.reducer 
 
-const store = createStore(counterReducer);
+    // for multiple reducer, we have to use below way 
+    reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
+});
 
+export const authActions = authSlice.actions;
+export const counterActions = counterSlice.actions;
 export default store;
 
 
