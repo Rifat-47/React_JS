@@ -2,23 +2,24 @@
 // connect can be used to get access the redux for classbased components
 import { useSelector, useDispatch } from 'react-redux';
 import classes from './Counter.module.css';
+import { Increment, Decrement, IncrementByAmount } from '../store';
 
 const Counter = () => {
 	const dispatch = useDispatch(); // useDispatch returns a function
 	
 	const counter = useSelector(state => state.counter); // useSelector gives as current snapshot
-	const show = useSelector(state => state.showCounter);
+	const show = useSelector(state => state.showCounter); // useSelector gives as current snapshot
 
 	const incrementHandler = () => {
-		dispatch({ type: 'increment' });
+		dispatch({ type: Increment });
 	};
 
 	const decrementHandler = () => {
-		dispatch({ type: 'decrement' });
+		dispatch({ type: Decrement });
 	};
 
 	const increaseHandler = () => {
-		dispatch({ type: 'incrementByAmount', amount: 5 })
+		dispatch({ type: IncrementByAmount, amount: 5 })
 	};
 
 	const toggleCounterHandler = () => {

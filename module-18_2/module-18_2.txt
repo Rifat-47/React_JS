@@ -15,9 +15,9 @@ we use useState/useReducer but need to build props chains.
 ex: user-authentication
 
 context/redux helps to manage the cross component or app-wide state. 
-
+---------
 install:
-    npm install redux react-redux
+    npm install @reduxjs/toolkit
 
 
 NB: in redux, don't mutate the object, create a brand new object. 
