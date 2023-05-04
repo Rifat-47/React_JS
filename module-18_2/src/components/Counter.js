@@ -1,6 +1,6 @@
 // useSelector or useStore can be used to get access the redux 
 // connect can be used to get access the redux for classbased components
-import { counterActions } from '../store';
+import { counterActions } from '../store/counter';
 import { useSelector, useDispatch } from 'react-redux';
 import classes from './Counter.module.css';
 

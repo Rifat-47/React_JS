@@ -1,24 +1,23 @@
 Module-18 Diving into redux
-tutorial: 7-
-tutorial 12 shows redux with classbased components
+tutorial: 16-23
+NB: in redux, don't mutate the object, create a brand new object. 
 ----------------------------------------
-local => belongs to single component,, 
-we use useState/useReducer hook
-ex: listeing input, toggling 'show more' etc.
+Project Name: Redux using redux toolkit
+Project description: here, redux is made of 2 slices. 
+one indicated the counter & another indicates the login & logout functionality.
 
-cross-component => affect multiple components,, 
-we use useState/useReducer but need to build props chains.
-ex: open/close modal
-
-app-wide state => affects entire app 
-we use useState/useReducer but need to build props chains.
-ex: user-authentication
-
-context/redux helps to manage the cross component or app-wide state. 
----------
 install:
     npm install @reduxjs/toolkit
 
+using redux toolkit, we may think, we are mutating the object, but actually not, those are handled by redux toolkit under the hood.
 
-NB: in redux, don't mutate the object, create a brand new object. 
+configureStore => creates a Redux store.
+
+createSlice => creates a slice of redux store 
+
+useSelector => give the current snapshot of something
+
+
+
+
 
