@@ -21,8 +21,11 @@ module-14_2 - documentation completed
 module-15_1 - documentation completed
 module-15_2 - documentation completed
 module-15_3 - documentation completed
-module-16_1 - 
-module-16_2 - 
-module-16_3 - 
-module-17 - 
+module-16_1 - documentation completed
+module-16_2 - documentation completed
+module-16_3 - documentation completed
+module-17 - documentation completed
 redux_start - 
+module-18_1 - documentation completed
+module-18_2 - documentation completed
+module-19_1 -
