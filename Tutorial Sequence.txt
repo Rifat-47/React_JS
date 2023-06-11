@@ -1,9 +1,9 @@
-** Project Sequence **
+** Project Sequence ** github **
 
-project-01 - documentation completed
-project-03 - documentation completed
-project-05 - documentation completed
-project-06 - documentation completed
+project-01 - documentation completed => not here
+project-03 - documentation completed => todo, modal, backdrop
+project-05 - documentation completed => hardcoded expense item project with year filter
+project-06 - documentation completed => 
 project-07 - documentation completed
 project-08 - documentation completed
 project-09 - documentation completed
