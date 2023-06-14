@@ -4,8 +4,8 @@ project-03 - documentation completed => todo, modal, backdrop
 project-05 - documentation completed => hardcoded expense item project with year filter
 project-07 - documentation completed => expense item project dynamically
 project-08 - documentation completed => todo project using Styling React Components (styled-components)
-module-09_1 - documentation completed
-module-09_2 - documentation completed
+module-09_1 - documentation completed => Add User project with Fragment, portals, refs (controlled approach)
+module-09_2 - documentation completed => Add User project with Fragment, portals, refs (uncontrolled approach)
 module-10_1 - documentation completed
 module-10_2 - documentation completed
 module-11 - documentation completed
