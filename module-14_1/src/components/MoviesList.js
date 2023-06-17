@@ -11,6 +11,7 @@ const MovieList = (props) => {
 					key={movie.id}
 					title={movie.title}
 					director={movie.director}
+					producer= {movie.producer}
 					releaseDate={movie.releaseDate}
 					openingText={movie.openingText}
 				/>
