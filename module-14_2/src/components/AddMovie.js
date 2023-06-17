@@ -24,6 +24,10 @@ function AddMovie(props) {
 		releaseDateRef.current.value = "";
 	}
 
+	// Generate the current date in the required format (YYYY-MM-DD)
+	const currentDate = new Date().toISOString().split('T')[0];
+	const minDate = '2000-01-01'; // min date
+	
 	return (
 		<form onSubmit={submitHandler}>
 			<div className={classes.control}>
@@ -36,7 +40,7 @@ function AddMovie(props) {
 			</div>
 			<div className={classes.control}>
 				<label htmlFor='date'>Release Date</label>
-				<input type='text' id='date' ref={releaseDateRef} />
+				<input type='date' id='date' ref={releaseDateRef} min={minDate} max={currentDate} />
 			</div>
 			<button>Add Movie</button>
 		</form>
