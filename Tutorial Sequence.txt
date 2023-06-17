@@ -11,11 +11,11 @@ module-10_2 - documentation completed => email & password form validation using 
 module-10_3 => intro to reactContext
 module-10_4 => context using useContext hook 
 module-11 - documentation completed => Building a food order app
-module-12_1 - documentation completed => 
-module-12_2 - documentation completed
-module-14_1 - documentation completed
-module-14_2 - documentation completed
-module-15_1 - documentation completed
+module-12_1 - documentation completed => react optimization techniques by memo hook 
+module-12_2 - documentation completed => react optimization techniques by useMemo & useCallback hook
+module-14_1 - documentation completed => Fetching Movie Data from api using promise & async await
+module-14_2 - documentation completed => Inserting & Fetching Movie Data from api using promise & async await
+module-15_1 - documentation completed => ForwardCounter & BackwardCounter using custom hook
 module-15_2 - documentation completed
 module-15_3 - documentation completed
 module-16_1 - 
