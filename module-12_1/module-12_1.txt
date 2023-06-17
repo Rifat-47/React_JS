@@ -4,8 +4,8 @@ an component is re-rendered only when props/state/context is changed.
 
 re-evaluating component !== re-rendering the DOM
 
-array, objects, function are non-primptive value in javascript.
-string, number, boolean are primptive value in javascript.
+array, objects, function are non-primptive value in javascript. Non-primptives are mutable.
+string, number, boolean are primptive value in javascript. Primptives are immutable.
 
 closure??
 
