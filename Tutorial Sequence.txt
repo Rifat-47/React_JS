@@ -16,8 +16,8 @@ module-12_2 - documentation completed => react optimization techniques by useMem
 module-14_1 - documentation completed => Fetching Movie Data from api using promise & async await
 module-14_2 - documentation completed => Inserting & Fetching Movie Data from api using promise & async await
 module-15_1 - documentation completed => ForwardCounter & BackwardCounter using custom hook
-module-15_2 - documentation completed
-module-15_3 - documentation completed
+module-15_2 - documentation completed => ForwardCounter & BackwardCounter using custom hook
+module-15_3 - documentation completed => Custom hooks for both get & post data in api
 module-16_1 - 
 module-16_2 - 
 module-16_3 - 
