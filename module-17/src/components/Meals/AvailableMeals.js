@@ -8,6 +8,9 @@ const AvailableMeals = props => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [httpError, setHttpError] = useState(null);
 
+	// async funtion always returns a promise, if we throw error inside of a promise, 
+	// that error will cause that promise to reject.
+	// here, we can use promise or try catch too.
 	useEffect(() => {
 		const fetchMeals = async () => {
 			const response = await fetch('https://module-17-1-default-rtdb.firebaseio.com/meals.json');
@@ -41,6 +44,8 @@ const AvailableMeals = props => {
 		});
 
 	}, []);
+
+
 
 
 	if (isLoading) {
