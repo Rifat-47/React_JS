@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useInput from '../hooks/use_input';
 
 const SimpleInput = (props) => {
+	// email is handled by useState and 
 	const [enteredEmail, setEnteredEmail] = useState('');
 	const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
 
@@ -17,6 +18,7 @@ const SimpleInput = (props) => {
 	};
 
 
+	// name is handled by custom hook 
 	const {
 		value: enteredName,
 		isValid: enteredNameIsValid,
