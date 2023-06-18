@@ -18,8 +18,8 @@ module-14_2 - documentation completed => Inserting & Fetching Movie Data from ap
 module-15_1 - documentation completed => ForwardCounter & BackwardCounter using custom hook
 module-15_2 - documentation completed => ForwardCounter & BackwardCounter using custom hook
 module-15_3 - documentation completed => Custom hooks for both get & post data in api
-module-16_1 - 
-module-16_2 - 
-module-16_3 - 
+module-16_1 - working with forms & user input
+module-16_2 - working with forms & user input upgraded
+module-16_3 - working with forms & user input using custom hooks
 module-17 - 
 redux_start - 
