@@ -1,9 +1,11 @@
 ** Project Sequence ** github **
 
-project-03 - doc completed => todo, modal, backdrop
-project-05 - doc completed => hardcoded expense item project with year filter
+project-03 - documentation completed => todo, modal, backdrop
+project-05 - documentation completed => hardcoded expense item project with year filter
 project-07 - documentation completed => expense item project dynamically
 project-08 - documentation completed => todo project using Styling React Components (styled-components)
+module-03 - documentation completed => React basic & working with components
+module-04 - documentation completed => React state & working with events(onChange)
 module-09_1 - documentation completed => Add User project with Fragment, portals, refs (controlled approach)
 module-09_2 - documentation completed => Add User project with Fragment, portals, refs (uncontrolled approach)
 module-10_1 - documentation completed => login logout handling by using basics of useEffect hook
