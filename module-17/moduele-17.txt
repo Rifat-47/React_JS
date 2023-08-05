@@ -1,7 +1,7 @@
 [module-17: Adding http & forms to food order app.]
 
 Project Name: Building a food order app.
-Description: food order app shows available meals to the customers by fetching data from api. 
+Description: Food order app shows available meals to the customers by fetching data from api. 
 Customers can add or remove meal items to the cart & see the total expense.
 Then, customer can confirm their order by user information & information are saved in the database through api.
 

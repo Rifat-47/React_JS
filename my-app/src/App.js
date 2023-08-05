@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
-import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
-import Cart from './components/Cart/Cart';
-import CartProvider from './store/CartProvider';
+import React, { useState, useCallback } from 'react';
+import Button from "../src/components/UI/Button/Button";
+import './App.css';
+import DemoOutput from './components/Demo/DemoOutput';
 
 function App() {
-	const [cartIsShown, setCartIsShown] = useState(false);
+	const [showParagraph, setShowParagraph] = useState(false);
+	const [allowToggle, setAllowToggle] = useState(false);
 
-	const showCartHandler = () => {
-		setCartIsShown(true);
+	const toggleParagraphHandler = useCallback(() => {
+		if (allowToggle){
+			setShowParagraph((prevShowParagraph) => !prevShowParagraph);
+		}
+	}, [allowToggle]);
+
+	const allowToggleHandler = () => {
+		setAllowToggle(true);
 	};
 
-	const hideCartHandler = () => {
-		setCartIsShown(false);
-	};
+	console.log("App")
 	return (
-		<CartProvider>
-			{cartIsShown && <Cart onClose={hideCartHandler} />}
-			<Header onShowCart={showCartHandler} />
-			<main>
-				<Meals />
-			</main>
-		</CartProvider>
+		<div className="app">
+			<h1>Hi there!</h1>
+			<DemoOutput show={showParagraph} />
+			<Button onClick={allowToggleHandler} text='button1' >Allow Toggling (button1)</Button>
+			<Button onClick={toggleParagraphHandler} text='button2'>Toggle Paragraph (button2)</Button>
+		</div>
 	);
 }
 
