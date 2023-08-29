@@ -1,0 +1,36 @@
+.chat {
+    max-width: 60%;
+    margin: auto;
+    border: 2px solid snow;
+    border-radius: 5px;
+    /* overflow-x: scroll; */
+}
+
+.avatar1 {
+    margin: 10px 5px 3px -10px;
+    border-radius: 50%;
+}
+
+.avatar2 {
+    margin: 10px -10px 3px 5px;
+    border-radius: 50%;
+}
+
+.input {
+    /* position: absolute; */
+    /* width: 95%; */
+    margin: 2px 5px;
+    min-width: 10%;
+}
+
+.button {
+    margin: 2px 0;
+    width: 10%;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+}

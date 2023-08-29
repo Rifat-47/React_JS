@@ -5,63 +5,64 @@ import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 
 const emailReducer = (state, action) => {
-	if (action.type === 'emailInput'){
-		return {value: action.val, isValid: action.val.includes('@')}
+	if (action.type === 'emailInput') {
+		return { value: action.val, isValid: action.val.includes('@') }
 	}
-	if (action.type === 'emailValidate'){
-		return {value: state.value, isValid: state.value.includes('@')}
+	if (action.type === 'emailValidate') {
+		return { value: state.value, isValid: state.value.includes('@') }
 	}
 	else {
-		return {value: '', isValid: false}
+		return { value: '', isValid: false }
 	}
 };
 
 const passwordReducer = (state, action) => {
-	if (action.type === 'passwordInput'){
-		return {value: action.val, isValid: action.val.trim().length > 6}
+	if (action.type === 'passwordInput') {
+		return { value: action.val, isValid: action.val.trim().length > 6 }
 	}
-	if (action.type === 'passwordValidate'){
-		return {value: state.value, isValid: state.value.trim().length > 6}
+	if (action.type === 'passwordValidate') {
+		return { value: state.value, isValid: state.value.trim().length > 6 }
 	}
 	else {
-		return {value: '', isValid: false}
+		return { value: '', isValid: false }
 	}
 };
 
 const Login = (props) => {
-	const [emailState, emailDispatch] = useReducer(emailReducer, {value: '', isValid: null});
-	const [passwordState, passwordDispatch] = useReducer(passwordReducer, {value: '', isValid: null});
+	const [emailState, emailDispatch] = useReducer(emailReducer, { value: '', isValid: null });
+	const [passwordState, passwordDispatch] = useReducer(passwordReducer, { value: '', isValid: null });
 	const [formIsValid, setFormIsValid] = useState(false);
 
-	const { isValid: emailIsValid} = emailState;
-	const { isValid: passwordIsValid} = passwordState;
+	const { isValid: emailIsValid } = emailState;
+	const { isValid: passwordIsValid } = passwordState;
 
-	useEffect(()=>{
-		const identifier = setTimeout(()=>{
+	useEffect(() => {
+		const identifier = setTimeout(() => {
 			console.log('useEffect!');
 			setFormIsValid(emailIsValid && passwordIsValid);
 		}, 500);
 
-		return ()=>{
+		return () => {
 			console.log('cleanup!');
-			clearTimeout(identifier);		}
-	},[emailIsValid, passwordIsValid]);
+			clearTimeout(identifier);
+		}
+	}, [emailIsValid, passwordIsValid]);
 
 	const emailChangeHandler = (event) => {
-		emailDispatch({type: 'emailInput', val: event.target.value});
+		emailDispatch({ type: 'emailInput', val: event.target.value });
 	};
 
 	const passwordChangeHandler = (event) => {
-		passwordDispatch({type: 'passwordInput', val: event.target.value});
+		passwordDispatch({ type: 'passwordInput', val: event.target.value });
 	};
 
 	const validateEmailHandler = () => {
-		emailDispatch({type:'emailValidate'});
-		
+		emailDispatch({ type: 'emailValidate' });
+
 	};
 
 	const validatePasswordHandler = () => {
-		passwordDispatch({type:'passwordValidate'});
+		passwordDispatch({ type: 'passwordValidate' });
 	};
 
 	const submitHandler = (event) => {
