@@ -4,6 +4,7 @@ project-03 - documentation completed => todo, modal, backdrop
 project-05 - documentation completed => hardcoded expense item project with year filter
 project-07 - documentation completed => expense item project dynamically
 project-08 - documentation completed => todo project using Styling React Components (styled-components)
+project-09 - documentation completed => todo project using Scss modules
 module-03 - doc completed => React basic & working with components
 module-04 - doc completed => React state & working with events(onChange)
 module-05 - doc completed => Rendering Lists & Conditional Content(expense tracker)
