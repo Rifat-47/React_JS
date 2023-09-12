@@ -1,0 +1,13 @@
+.movable_button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(2, 126, 228);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: move;
+    border-radius: 50%;
+  }
+  
