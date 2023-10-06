@@ -1,25 +1,52 @@
-import Alldata from "./components/Alldata";
+import React, { useState } from 'react';
+import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
+import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 import './App.css';
-import CreateData from "./components/CreateData";
-import { useState } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import { ADD_DATA } from "./store/scc";
-import CreateForm from "./components/CreateForm";
 
-function App() {
-	const dispatch = useDispatch();
+const App = () => {
+	const [courseGoals, setCourseGoals] = useState([
+		{ text: 'Do all exercises!', id: 'g1' },
+		{ text: 'Finish the course!', id: 'g2' }
+	]);
 
-	const addDataHandler = (data) => {
-		console.log(data);
-		dispatch({type: ADD_DATA, data: data});
+	const addGoalHandler = enteredText => {
+		setCourseGoals(prevGoals => {
+			console.log(prevGoals);
+			const updatedGoals = [...prevGoals];
+			updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
+			// const updatedGoals = [{ text: enteredText, id: Math.random().toString() }, ...prevGoals];
+			console.log(updatedGoals)
+			return updatedGoals;
+		});
 	};
-	return (
-		<div className="App">
-			<CreateForm createDataHandler={addDataHandler} />
-			<Alldata url = 'https://jsonplaceholder.typicode.com/posts' />
 
+	const deleteItemHandler = goalId => {
+		setCourseGoals(prevGoals => {
+			const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
+			return updatedGoals;
+		});
+	};
+
+	let content = (
+		<p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
+	);
+
+	if (courseGoals.length > 0) {
+		content = (
+			<CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
+		);
+	}
+
+	return (
+		<div>
+			<section id="goal-form">
+				<CourseInput onAddGoal={addGoalHandler} />
+			</section>
+			<section id="goals">
+				{content}
+			</section>
 		</div>
 	);
-}
+};
 
 export default App;

@@ -1,4 +1,4 @@
-module 06: Styling React Components
+module 06_2: Styling React Components using css modules.
 
 Project Name: Course Goal
 
