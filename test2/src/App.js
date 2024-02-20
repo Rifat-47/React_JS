@@ -1,51 +1,29 @@
+// App.js
 import React, { useState } from 'react';
-import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
-import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
-import './App.css';
+import DroppableContainer from './components/DroppableContainer';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { finalSpaceCharacters } from "../src/components/data";
 
 const App = () => {
-	const [courseGoals, setCourseGoals] = useState([
-		{ text: 'Do all exercises!', id: 'g1' },
-		{ text: 'Finish the course!', id: 'g2' }
+	const [items, setItems] = useState([
+		{ id: 1, content: 'Item 1' },
+		{ id: 2, content: 'Item 2' },
+		{ id: 3, content: 'Item 3' },
 	]);
 
-	const addGoalHandler = enteredText => {
-		setCourseGoals(prevGoals => {
-			console.log(prevGoals);
-			const updatedGoals = [...prevGoals];
-			updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
-			// const updatedGoals = [{ text: enteredText, id: Math.random().toString() }, ...prevGoals];
-			console.log(updatedGoals)
-			return updatedGoals;
-		});
+	const handleDrop = (draggedItemId) => {
+		// Handle the drop event and update the state accordingly
+		const updatedItems = items.filter((item) => item.id !== draggedItemId);
+		setItems(updatedItems);
 	};
-
-	const deleteItemHandler = goalId => {
-		setCourseGoals(prevGoals => {
-			const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
-			return updatedGoals;
-		});
-	};
-
-	let content = (
-		<p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
-	);
-
-	if (courseGoals.length > 0) {
-		content = (
-			<CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
-		);
-	}
 
 	return (
-		<div>
-			<section id="goal-form">
-				<CourseInput onAddGoal={addGoalHandler} />
-			</section>
-			<section id="goals">
-				{content}
-			</section>
-		</div>
+		<DndProvider backend={HTML5Backend}>
+			<div style={{height: '50rem',}}>
+				<DroppableContainer onDrop={handleDrop} items={items} />
+			</div>
+		</DndProvider>
 	);
 };
 

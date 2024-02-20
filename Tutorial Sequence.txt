@@ -14,9 +14,9 @@ module-09_2 - documentation completed => Add User project with refs (uncontrolle
 module-10_1 - doc completed => login-logout handling by using basics of useEffect hook
 module-10_2 - doc completed => email & password form validation using useReducer hook
 module-10_3 - doc completed => intro to reactContext
-module-10_4 - doc completed => context using useContext hook 
+module-10_4 - doc completed => context using useContext hook
 module-11 - doc completed => Building a food order app
-module-12_1 - doc completed => react optimization techniques by memo hook 
+module-12_1 - doc completed => react optimization techniques by memo hook
 module-12_2 - doc completed => react optimization techniques by useMemo & useCallback hook
 module-14_1 - documentation completed => Fetching Movie Data from api using promise & async await
 module-14_2 - doc completed => Inserting & Fetching Movie Data from api using promise & async await
@@ -31,3 +31,6 @@ module-18_1 - working with redux_start
 redux_start - 
 my-app - 
 test2 - 
+
+
+to be revised in the future: useRef, forwardRef, 
